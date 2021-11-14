@@ -11,7 +11,6 @@ const { MongoClient } = require('mongodb');
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.q8zce.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-// console.log(uri);
 
 async function run() {
     try {
@@ -104,15 +103,6 @@ async function run() {
         //     const options = { upsert: true };
         //     const updateDoc = { $set: user };
         //     const result = await userCollection.updateOne(filter, updateDoc, options);
-        //     res.json(result)
-        // })
-
-        // // PUT Role
-        // app.put('/users/admin', async (req, res) => {
-        //     const user = req.body;
-        //     const filter = { email: user.email };
-        //     const updateDoc = { $set: { role: 'admin' } };
-        //     const result = await userCollection.updateOne(filter, updateDoc);
         //     res.json(result)
         // })
     }
