@@ -36,6 +36,14 @@ async function run() {
             res.json(result)
         })
 
+
+        // POST API
+        app.post('/userOrder', async (req, res) => {
+            const addOrder = req.body;
+            const result = await orderCollection.insertOne(addOrder)
+            res.json(result)
+        })
+
         // // POST API
         // app.post('/userOrder', async (req, res) => {
         //     const addOrder = req.body;
